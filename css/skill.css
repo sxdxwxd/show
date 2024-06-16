@@ -1,0 +1,97 @@
+/* 基础变量 */
+:root {
+    --font-heading: '字魂白鸽天行体', sans-serif;
+    --color-primary: #e3d1d1;
+    --color-secondary: #f0e1e1;
+    --color-progress-bg: #f0f0f0;
+    --color-progress-bar: #e3ba3f; /* 可以根据需要自定义颜色 */
+    --color-skill-header: #3a3a3a;
+    --padding-container: 20px;
+    --margin-bottom-element: 20px;
+}
+
+/* 标题样式 */
+#skills h2 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--color-primary);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 进度条容器 */
+.progress-container {
+    margin-bottom: var(--margin-bottom-element);
+    padding: var(--padding-container);
+    background-color: var(--color-progress-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 进度条背景 */
+.progress {
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 进度条前景 */
+.progress-bar {
+    font-size: 1.2em;
+    line-height: 30px;
+    background-color: var(--color-progress-bar);
+    width: 0;
+    transition: width 1s ease-in-out;
+    color: #fff;
+    padding-left: 10px;
+}
+
+/* 技能头部 */
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-skill-header);
+}
+
+/* 技能名称 */
+.skill-name {
+    font-size: 1.1em;
+    color: var(--color-secondary);
+}
+
+/* 渐变配色 */
+.progress-bar.gradient-bg {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #skills h2 {
+        font-size: 2em;
+    }
+
+    .skill-header {
+        font-size: 1em;
+    }
+
+    .progress-bar {
+        font-size: 1em;
+    }
+
+    .skill-name {
+        font-size: 1em;
+    }
+}
+
+/* 加载动画示例 */
+.progress-bar.is-visible {
+    width: 100%; /* 根据需要调整宽度百分比 */
+}

@@ -1,0 +1,74 @@
+/* contact.css */
+
+/* 通用样式 */
+#contact {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.contact-header {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+form .btn-primary {
+    background-color: #c1970e;
+    border-color: #f5c000;
+    cursor: pointer;
+}
+
+/* 暗模式样式 */
+.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode #contact {
+    background-color: #495057;
+}
+
+.dark-mode form {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.dark-mode .form-control {
+    background-color: #495057;
+    border: 1px solid #6c757d;
+    color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+    background-color: #5f7105;
+    border-color: #7e7d0e;
+}
+
+/* 图片样式 */
+#contact .img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    form {
+        margin-bottom: 2rem;
+    }
+}

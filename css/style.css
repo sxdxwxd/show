@@ -1,0 +1,94 @@
+/* 引入字体 */
+@font-face {
+    font-family: '字魂白鸽天行体'; 
+    src: url('../src/font/字魂白鸽天行体.ttf') format('truetype'); 
+}
+
+/* 基础变量 */
+:root {
+    --font-primary: '字魂白鸽天行体', sans-serif;
+    --color-primary: rgb(168, 128, 35);
+    --color-background-dark: #121212;
+    --color-text-light: #e0e0e0;
+    --color-sidebar-dark: #1e1e1e;
+    --color-hover-dark: #e1ad1c;
+    --color-overlay-dark: rgba(0, 0, 0, 0.8);
+    --color-footer-bg: #a79102;
+    --color-footer-text: #fff;
+}
+
+/* 基础样式 */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-primary);
+    line-height: 1.6;
+}
+
+/* 头部样式 */
+header {
+    position: relative;
+    height: 100vh;
+    background: url('../src/img/bg1.png') no-repeat center center / cover;
+}
+
+header .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 头部遮罩层 */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 动画效果 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.header .container h1 {
+    animation: fadeInDown 1s;
+}
+
+.header .container p {
+    animation: fadeInUp 2s;
+}
+
+/* 暗模式样式 */
+body.dark-mode {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+}
+
+body.dark-mode .sidebar {
+    background-color: var(--color-sidebar-dark);
+}
+
+body.dark-mode .sidebar a {
+    color: var(--color-text-light);
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: var(--color-hover-dark);
+    color: var(--color-footer-text);
+}
+
+body.dark-mode header .header-overlay {
+    background-color: var(--color-overlay-dark);
+}
+
+body.dark-mode .container h1,
+body.dark-mode .container p {
+    color: var(--color-text-light);
+}
+
+/* 页脚样式 */
+footer {
+    background: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    padding: 20px 0;
+}

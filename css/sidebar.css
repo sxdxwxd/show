@@ -1,0 +1,99 @@
+/* 基础变量 */
+:root {
+    --sidebar-bg-color: #f8f9fa;
+    --sidebar-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    --sidebar-width: 200px;
+    --primary-color: #a1916f;
+    --primary-hover-bg: #8d5609;
+    --primary-hover-color: #bc961a;
+    --primary-font-bold: bold;
+    --font-size-small: 0.9rem;
+    --text-indent: 2em;
+    --border-radius-lg: 20px;
+    --transition-fast: 0.3s;
+    --margin-default: 20px;
+    --z-index-sidebar: 1000;
+    --font-size-date: 20px;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    box-shadow: var(--sidebar-shadow);
+    padding-top: var(--margin-default);
+    z-index: var(--z-index-sidebar);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: var(--margin-default) 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: var(--primary-font-bold);
+    display: block;
+    padding: 10px 20px;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: var(--primary-hover-bg);
+    color: var(--primary-hover-color);
+    text-decoration: underline;
+}
+
+.sidebar p {
+    font-size: var(--font-size-small);
+}
+
+.sidebar button {
+    width: 100%;
+}
+
+/* 文本缩进 */
+.text-indent-2 {
+    text-indent: var(--text-indent);
+}
+
+/* 主题切换按钮样式 */
+#themeToggle {
+    border-radius: var(--border-radius-lg);
+    font-weight: var(--primary-font-bold);
+    background-color: var(--primary-hover-color);
+    display: block;
+    margin: var(--margin-default) auto;
+}
+
+/* 针对日期段落的样式 */
+#currentDate {
+    font-size: var(--font-size-date);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+        padding-top: 10px;
+    }
+
+    .sidebar ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    #themeToggle {
+        margin: 10px auto;
+    }
+}

@@ -1,0 +1,42 @@
+/* 追加的基础变量 */
+:root {
+    --button-bg-color: #bfaa33;
+    --button-hover-bg-color: #555;
+    --button-text-color: white;
+    --button-padding: 10px;
+    --button-border-radius: 50%;
+    --button-transition: 0.2s;
+    --button-bottom: 20px;
+    --button-right: 20px;
+    --z-index-top-button: 99;
+}
+
+/* 返回顶部按钮样式 */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: var(--button-bottom);
+    right: var(--button-right);
+    z-index: var(--z-index-top-button);
+    border: none;
+    outline: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    transition: background-color var(--button-transition);
+}
+
+#backToTop:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+}

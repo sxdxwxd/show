@@ -1,0 +1,128 @@
+/* 基础变量 */
+:root {
+    --color-highlight: #d6ad56;
+    --transition-duration: 0.3s;
+    --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --box-shadow-card-hover: 0 5px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --border-radius-btn: 20px;
+    --border-radius-card-img: .25rem;
+    --margin-elem: 40px;
+    --font-size-title: 2em;
+    --progress-bar-height: 30px;
+    --progress-bar-font: 1.2em;
+    --animate-duration: 1s;
+    --card-bg-color-dark: #333; /* Dark mode card background color */
+    --card-text-color-dark: #ccc; /* Dark mode card text color */
+    --card-border-color-dark: #444; /* Dark mode card border color */
+}
+
+/* 自定义按钮 */
+.btn-custom {
+    border-radius: var(--border-radius-btn);
+    transition: all var(--transition-duration) ease;
+}
+
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* 卡片样式 */
+.card {
+    margin-bottom: 1.5em;
+    border: none;
+    background-color: #fff; /* Light mode background color */
+    color: #000; /* Light mode text color */
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.card img {
+    border-top-left-radius: var(--border-radius-card-img);
+    border-top-right-radius: var(--border-radius-card-img);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+/* 暗模式卡片样式 */
+.dark-mode .card {
+    background-color: var(--card-bg-color-dark);
+    color: var(--card-text-color-dark);
+    border: 1px solid var(--card-border-color-dark);
+}
+
+.dark-mode .card:hover {
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+.dark-mode .modal {
+    background-color: var(--card-bg-color-dark);
+    color: var(--card-text-color-dark);
+    border: 1px solid var(--card-border-color-dark);
+}
+
+.dark-mode .modal:hover {
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+
+/* 模态框视频 */
+.modal-body video {
+    width: 100%;
+    height: auto;
+}
+
+/* 标题样式 */
+.portfolio-title, .skill-header, .contact-header {
+    margin: var(--margin-elem) 0;
+    font-size: var(--font-size-title);
+    color: var(--color-highlight);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* 进度条 */
+.progress {
+    height: var(--progress-bar-height);
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    font-size: var(--progress-bar-font);
+    line-height: var(--progress-bar-height);
+    background-color: #4caf50; /* 可根据需要自定义颜色 */
+    width: 0;
+    transition: width 1s ease-in-out;
+    color: #fff;
+    padding-left: 10px;
+}
+
+/* box-shadow 和 border-radius */
+.shadow-lg {
+    box-shadow: var(--box-shadow-lg) !important;
+}
+
+.rounded {
+    border-radius: .3rem !important;
+}
+
+/* 动画 */
+.animate__animated {
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .portfolio-title, .skill-header, .contact-header {
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+}
